@@ -1,6 +1,12 @@
 # Circle Idea
 Project managing, note taking, idea making application.
 
-# Welcome
+# Getting Started
 
-The "Client" folder holds our front-end React framework in Typescript. The server is in Express and will be written in Typescript.
+Client and Server folder both need to run `npm install`
+
+Build the dockerfile with `docker build .` and that is with the perod.
+
+Then you can compose it up: `docker-compose up -d `
+
+The -d flag is to run docker in the background. When you want to take it down use `docker-compose down`
