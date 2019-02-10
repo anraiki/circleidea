@@ -1,0 +1,22 @@
+# docker-compose.yml
+version: "3"
+services:
+  web:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/App
+      - /usr/App/Client/node_modules
+      - /usr/App/Server/node_modules
+    depends_on:
+      - postgres
+    ports:
+      - "3000:3000"
+      - "9229:9229"
+    tty: true
+  postgres:
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: circleidea
+      POSTGRES_PASSWORD: postgres

@@ -1,0 +1,21 @@
+{
+  "name": "circleidea",
+  "version": "1.0.0",
+  "description": "Project managing, note taking, idea making application.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd Server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anraiki/circleidea.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anraiki/circleidea/issues"
+  },
+  "homepage": "https://github.com/anraiki/circleidea#readme"
+}
