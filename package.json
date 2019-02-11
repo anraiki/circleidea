@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd Server && npm start",
+    "start": "cd Server && npm start && cd .. && cd Client && npm start",
     "install": "npm install --save Server Client"
   },
   "repository": {

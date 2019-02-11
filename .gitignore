@@ -5,6 +5,7 @@
 /Server/node_modules
 /Client/node_modules
 /.pnp
+/Server/v8-compile-cache-0
 .pnp.js
 
 # testing
