@@ -9,15 +9,19 @@ services:
       - /usr/App/Client/node_modules
       - /usr/App/Server/node_modules
     depends_on:
-      - postgres
+      - db
     ports:
-      - "3000:3000"
-      - "9229:9229"
-      - "8000:8000"
+      - "3000:3000" # WebPack Development Server Port
+      - "8000:8000" # Express Server Ports
     tty: true
-  postgres:
+    environment: # Posgres uses Environment Variables so we don't have to setup
+      PGHOST: db
+      PGDATABASE: circleidea
+      PGUSER: postgres
+  db: # External Postgres DB would require us to not use this config
     image: postgres:11.1-alpine
     environment:
-      POSTGRES_USER: postgres
       POSTGRES_DB: circleidea
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - "5432:5432"
