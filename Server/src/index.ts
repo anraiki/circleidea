@@ -1,19 +1,22 @@
-const express       = require("express");
-const { Client }    = require("pg");
+import express from "express";
+// import { Client } from "pg";
+
+import * as User from "./controller/user";
+
 const app           = express();
 const port          = 8000;
+// const db         = new Client();
+const router        = express.Router();
 
-let db              = new Client();
+// Prepend Router with API namespace
+app.use("/api", router);
 
-app.get("/api", async (req, res) => {
+// Start of Routing
+router.get("/user",                       User.info);
+router.get(["/user/login",  "/login"],    User.login);
+router.get(["/user/signup", "/signup"],   User.signup);
 
-    await db.connect();
-    const result = await db.query("SELECT NOW()");
-    console.log(result);
-    await db.end();
-
-    res.send("Hello World!");
-
-});
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () =>
+    // tslint:disable-next-line:no-console
+    console.log(`Example app listening on port ${port}!`)
+);
