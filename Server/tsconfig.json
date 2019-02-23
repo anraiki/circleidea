@@ -17,9 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
   },
   "include": [
-    "src"
+    "src/**/*"
   ]
 }
