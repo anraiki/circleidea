@@ -35,6 +35,7 @@
     "pg-promise": "^8.5.5"
   },
   "devDependencies": {
+    "@types/node": "^11.9.5",
     "nodemon": "^1.18.10",
     "tslint": "^5.12.1",
     "typescript": "^3.3.3"
