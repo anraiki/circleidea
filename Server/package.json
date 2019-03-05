@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "tsc": "tsc",
-    "prestart": "npm run build",
+    "build": "npm run build",
     "tstart": "node .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "pm2 start ecosystem.config.js"

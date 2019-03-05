@@ -1,8 +1,8 @@
 import express from "express";
-// import { Client } from "pg";
-
+import { Client } from "pg";
 import * as User from "./controller/user";
 
+const db            = new Client();
 const app           = express();
 const port          = 8000;
 // const db         = new Client();
